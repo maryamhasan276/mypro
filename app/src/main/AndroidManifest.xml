@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projectcloud">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Projectcloud">
+
+
+        <service
+            android:name=".service.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+
+
+
+
+        <activity
+            android:name=".viewAssignment"
+            android:exported="false"
+            android:theme="@style/status_bar_blue"/>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-2196207525988281~9231873016" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_foreground" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/mycolor" />
+
+        <activity
+            android:name=".contacts"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".conversation"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".lec_detail"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".courseDetails"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".forget_password"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".student.signupStudent"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".splash"
+            android:exported="true"
+            android:theme="@style/status_bar_transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".lecturer.lec_edit_profile"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".lecturer.lec_profile"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".lecturer.lec_signup"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".login"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".student.signup"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".intro"
+            android:exported="false"
+            android:theme="@style/status_bar_transparent" />
+        <activity
+            android:name=".Change_password"
+            android:exported="false"
+            android:theme="@style/status_bar_white" />
+        <activity
+            android:name=".student.edit_profile"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".student.profile"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+        <activity
+            android:name=".HomeStudentActivity"
+            android:exported="false"
+            android:theme="@style/status_bar_blue" />
+    </application>
+
+</manifest>
